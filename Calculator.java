@@ -1,8 +1,8 @@
 public class Calculator {
     public static void main(String args[]) {
         double a = 1;
-        double b = 2;
-        int operation = 5;
+        double b = 1;
+        int operation = 1;
 
         operate(a, b, operation);
     }
@@ -19,9 +19,12 @@ public class Calculator {
                 print(a + " * " + b + " = " + (a * b));
                 break;
             case 4:
+                if(b == 0) {
+                    print("Divisão por 0 inválida, tente outra operação");
+                    return;
+                }
                 print(a + " / " + b + " = " + (a / b));
                 break;
-        
             default:
                 print("Operação inválida tente novamente");
 
